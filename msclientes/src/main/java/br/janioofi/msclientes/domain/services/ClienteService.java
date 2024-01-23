@@ -17,9 +17,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ClienteService {
     private final ClienteRepository repository;
-
-    private ModelMapper mapper = new ModelMapper().registerModule(new RecordModule());
-
+    private final ModelMapper mapper = new ModelMapper().registerModule(new RecordModule());
 
     @Transactional
     public Cliente save(ClienteDTO data){
