@@ -4,6 +4,7 @@ import br.janioofi.msclientes.domain.DTO.ClienteDTO;
 import br.janioofi.msclientes.domain.entities.Cliente;
 import br.janioofi.msclientes.domain.services.ClienteService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -13,6 +14,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
+@Slf4j
 @RequestMapping("/api/clientes")
 public class ClienteController {
 
@@ -20,6 +22,7 @@ public class ClienteController {
 
     @GetMapping
     public ResponseEntity<List<Cliente>> findAll(){
+        log.info("Microservice Clientes:  Listando todos os clientes");
         return ResponseEntity.ok().body(service.findAll());
     }
 
