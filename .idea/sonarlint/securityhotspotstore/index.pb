@@ -29,3 +29,9 @@ F
 mscloudgateway/pom.xml,f\6\f6e7f35fe308c940a005feba805651dac1299d13
 †
 Vmscloudgateway/src/main/java/br/janioofi/mscloudgateway/MscloudgatewayApplication.java,3\d\3d9d4cb27a7c98a9ee823d3eb67153c0666d31b7
+A
+mscartoes/pom.xml,6\5\652740fa6a7b1ee3752982a5941611eba2b212fd
+w
+Gmscartoes/src/main/java/br/janioofi/mscartoes/MscartoesApplication.java,b\e\be04e446f0e46690a10ac518475c7f37edc738f7
+
+Omscartoes/src/main/java/br/janioofi/mscartoes/controllers/CartoesCotroller.java,b\b\bb77d162e96cb80c1e61eb942a79e0f42f874a5e

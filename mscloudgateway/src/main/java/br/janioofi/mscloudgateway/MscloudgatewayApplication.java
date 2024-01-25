@@ -20,6 +20,7 @@ public class MscloudgatewayApplication {
 		return builder
 				.routes()
 				.route(r -> r.path("/api/clientes/**").uri("lb://msclientes"))
+				.route(r -> r.path("/api/cartoes/**").uri("lb://mscartoes"))
 				.route(r -> r.path("/swagger-ui/index.html/**").uri("lb://msclientes"))
 				.build();
 	}
