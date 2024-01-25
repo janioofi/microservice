@@ -1,6 +1,6 @@
 package br.janioofi.msclientes.domain.services;
 
-import br.janioofi.msclientes.domain.DTO.ClienteDTO;
+import br.janioofi.msclientes.domain.dtos.ClienteDTO;
 import br.janioofi.msclientes.domain.entities.Cliente;
 import br.janioofi.msclientes.domain.exceptions.RecordNotFoundException;
 import br.janioofi.msclientes.domain.repositories.ClienteRepository;
@@ -8,7 +8,6 @@ import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.record.RecordModule;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

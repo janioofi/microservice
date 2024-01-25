@@ -1,6 +1,6 @@
 package br.janioofi.msclientes.controllers;
 
-import br.janioofi.msclientes.domain.DTO.ClienteDTO;
+import br.janioofi.msclientes.domain.dtos.ClienteDTO;
 import br.janioofi.msclientes.domain.entities.Cliente;
 import br.janioofi.msclientes.domain.services.ClienteService;
 import lombok.RequiredArgsConstructor;
