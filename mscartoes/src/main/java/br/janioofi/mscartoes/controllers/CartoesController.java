@@ -8,6 +8,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/cartoes")
 @RequiredArgsConstructor
@@ -24,5 +26,11 @@ public class CartoesController {
     public ResponseEntity<Cartao> cadastra(@RequestBody CartaoDTO data){
         return ResponseEntity.status(HttpStatus.CREATED).body(service.save(data));
     }
+
+    @GetMapping
+    public ResponseEntity<List<Cartao>> getCartoesRendaAte(@RequestParam Long renda){
+        return ResponseEntity.ok().body(service.getCartoesRendaMenorIgual(renda));
+    }
+
 
 }
