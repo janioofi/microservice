@@ -32,8 +32,8 @@ public class ClienteController {
         return ResponseEntity.created(uri).body(service.save(data));
     }
 
-    @GetMapping("/{cpf}")
-    public ResponseEntity<Cliente> findByCPF(@PathVariable String cpf){
+    @GetMapping(params = "cpf")
+    public ResponseEntity<Cliente> findByCPF(@RequestParam String cpf){
         return ResponseEntity.ok().body(service.findByCpf(cpf));
     }
 }
