@@ -1,13 +1,15 @@
 package br.janioofi.msavaliadorcredito.controllers;
 
+import br.janioofi.msavaliadorcredito.domain.RetornoAvaliacaoCliente;
+import br.janioofi.msavaliadorcredito.domain.entities.DadosAvaliacao;
 import br.janioofi.msavaliadorcredito.domain.entities.SituacaoCliente;
 import br.janioofi.msavaliadorcredito.domain.services.AvaliadorCreditoService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RequiredArgsConstructor
 @RestController
@@ -24,5 +26,11 @@ public class AvaliadorCreditoController {
     @GetMapping(value = "/situacao-cliente", params = "cpf")
     public ResponseEntity<SituacaoCliente> consultaSituacaoCliente(@RequestParam String cpf){
         return ResponseEntity.ok().body(avaliadorCreditoService.obterSituacaoCliente(cpf));
+    }
+
+    @PostMapping
+    public ResponseEntity realizarAvaliacao(@RequestBody DadosAvaliacao dados){
+        RetornoAvaliacaoCliente retornoAvaliacaoCliente = avaliadorCreditoService.realizarAvaliacao(dados.getCpf(), dados.getRenda());
+        return ResponseEntity.ok(retornoAvaliacaoCliente);
     }
 }
