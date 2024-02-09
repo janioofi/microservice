@@ -85,3 +85,5 @@ cmsavaliadorcredito/src/main/java/br/janioofi/msavaliadorcredito/domain/RetornoA
 cmsavaliadorcredito/src/main/java/br/janioofi/msavaliadorcredito/domain/entities/CartaoAprovado.java,5\2\523c62049eeeb5e7ea1cc1e76733b24e1fa8d9ab
 ‹
 [msavaliadorcredito/src/main/java/br/janioofi/msavaliadorcredito/domain/entities/Cartao.java,8\4\845e4e4403a0b64613034eecb719fec71d455c0d
+Ž
+^mscartoes/src/main/java/br/janioofi/mscartoes/domain/infra/mqueue/EmissaoCartaoSubscriber.java,2\4\249d8f0501ad67975854bd6f52c3e54131c3f380
