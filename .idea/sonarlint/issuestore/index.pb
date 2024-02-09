@@ -87,3 +87,9 @@ cmsavaliadorcredito/src/main/java/br/janioofi/msavaliadorcredito/domain/entities
 [msavaliadorcredito/src/main/java/br/janioofi/msavaliadorcredito/domain/entities/Cartao.java,8\4\845e4e4403a0b64613034eecb719fec71d455c0d
 Ž
 ^mscartoes/src/main/java/br/janioofi/mscartoes/domain/infra/mqueue/EmissaoCartaoSubscriber.java,2\4\249d8f0501ad67975854bd6f52c3e54131c3f380
+ª
+zmsavaliadorcredito/src/main/java/br/janioofi/msavaliadorcredito/domain/infra/mqueue/SolicitacaoEmissaoCartaoPublisher.java,7\3\73f918515336763d19dc44c12e112fb11e8b7c57
+¢
+rmsavaliadorcredito/src/main/java/br/janioofi/msavaliadorcredito/domain/entities/DadosSolicitacaoEmissaoCartao.java,0\b\0b019c08cb6bd62ca90aa86989fcd00a88a1b1a0
+„
+Tmsavaliadorcredito/src/main/java/br/janioofi/msavaliadorcredito/config/MQConfig.java,6\d\6df26f69358211d5cf74ee6a9cf1ae5555126e17
