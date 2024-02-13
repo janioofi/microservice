@@ -3,24 +3,26 @@ package br.janioofi.msavaliadorcredito.domain.services;
 import br.janioofi.msavaliadorcredito.domain.RetornoAvaliacaoCliente;
 import br.janioofi.msavaliadorcredito.domain.entities.*;
 import br.janioofi.msavaliadorcredito.domain.exceptions.BusinessException;
+import br.janioofi.msavaliadorcredito.domain.exceptions.ErrorSolicitacaoCartaoException;
 import br.janioofi.msavaliadorcredito.domain.exceptions.RecordNotFoundException;
 import br.janioofi.msavaliadorcredito.domain.infra.clients.CartaoResourceClients;
 import br.janioofi.msavaliadorcredito.domain.infra.clients.ClienteResourceClient;
+import br.janioofi.msavaliadorcredito.domain.infra.mqueue.SolicitacaoEmissaoCartaoPublisher;
 import feign.FeignException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
 public class AvaliadorCreditoService {
     private final ClienteResourceClient clienteResourceClient;
     private final CartaoResourceClients cartaoResourceClients;
+    private final SolicitacaoEmissaoCartaoPublisher emissaoCartaoPublisher;
 
     public SituacaoCliente obterSituacaoCliente(String cpf) throws RecordNotFoundException{
         try {
@@ -56,7 +58,7 @@ public class AvaliadorCreditoService {
                 aprovado.setBandeira(cartao.getBandeira());
                 aprovado.setLimiteAprovado(limiteAprovado);
                 return aprovado;
-            }).collect(Collectors.toList());
+            }).toList();
             return new RetornoAvaliacaoCliente(listaCartoesAprovados);
 
         }catch (FeignException.FeignClientException e){
@@ -65,6 +67,16 @@ public class AvaliadorCreditoService {
                 throw new RecordNotFoundException("Nenhum cliente encontrado com cpf " + cpf);
             }
             throw new BusinessException(e.getMessage(), e.status());
+        }
+    }
+
+    public ProtocoloSolicitacaoCartao solicitarEmissaoDeCartao(DadosSolicitacaoEmissaoCartao dados){
+        try {
+            emissaoCartaoPublisher.solicitarCartao(dados);
+            var protocolo = UUID.randomUUID().toString();
+            return new ProtocoloSolicitacaoCartao(protocolo);
+        }catch (Exception e){
+            throw new ErrorSolicitacaoCartaoException(e.getMessage());
         }
     }
 }

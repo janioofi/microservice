@@ -1,4 +1,4 @@
-package br.janioofi.msavaliadorcredito.domain.entities;
+package br.janioofi.mscartoes.domain.entities;
 
 import lombok.Data;
 
