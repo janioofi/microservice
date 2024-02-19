@@ -17,7 +17,6 @@ import java.util.List;
 @Slf4j
 @RequestMapping("/api/clientes")
 public class ClienteController {
-
     private final ClienteService service;
 
     @GetMapping
