@@ -151,3 +151,7 @@ G
 eurekaserver/.gitignore,2\7\2771fa732954812c23d85e37cdc36a636e90e448
 G
 eurekaserver/Dockerfile,2\b\2b0fbfd6af857f5a7e361a7917ef24fc34511854
+M
+msavaliadorcredito/Dockerfile,9\e\9ed5aa2cc182920b2ea6cef68a7d8224fec4d000
+D
+mscartoes/Dockerfile,2\4\2499240286fd6918e9eb5f7524b21ebfef69631c
