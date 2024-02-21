@@ -147,3 +147,7 @@ x
 Hmscartoes/src/main/java/br/janioofi/mscartoes/domain/config/Swagger.java,2\a\2a174aa1eb1d3836ad81c4a39008f5d3e19346c1
 ƒ
 Smsavaliadorcredito/src/main/java/br/janioofi/msavaliadorcredito/config/Swagger.java,5\4\54cd5d106f09fd9b2d7c1cb4831900bece3469c2
+G
+eurekaserver/.gitignore,2\7\2771fa732954812c23d85e37cdc36a636e90e448
+G
+eurekaserver/Dockerfile,2\b\2b0fbfd6af857f5a7e361a7917ef24fc34511854
