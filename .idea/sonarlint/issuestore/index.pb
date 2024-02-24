@@ -155,3 +155,7 @@ M
 msavaliadorcredito/Dockerfile,9\e\9ed5aa2cc182920b2ea6cef68a7d8224fec4d000
 D
 mscartoes/Dockerfile,2\4\2499240286fd6918e9eb5f7524b21ebfef69631c
+E
+msclientes/Dockerfile,6\e\6e91669d7e03368f2af3834fdb6c731dda6c2e52
+Å
+Q.idea/sonarlint/securityhotspotstore/6/e/6e91669d7e03368f2af3834fdb6c731dda6c2e52,0\9\099f86e6bd0f9f8e8a180e66e0a23958ab7769aa
