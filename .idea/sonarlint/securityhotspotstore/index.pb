@@ -159,3 +159,13 @@ E
 msclientes/Dockerfile,6\e\6e91669d7e03368f2af3834fdb6c731dda6c2e52
 Å
 Q.idea/sonarlint/securityhotspotstore/6/e/6e91669d7e03368f2af3834fdb6c731dda6c2e52,0\9\099f86e6bd0f9f8e8a180e66e0a23958ab7769aa
+I
+mscloudgateway/Dockerfile,1\e\1e132c63bb685b5f526e589b27c75ad70e3059f6
+w
+G.idea/sonarlint/issuestore/0/9/099f86e6bd0f9f8e8a180e66e0a23958ab7769aa,a\8\a86a27f94fb9696a1cffa537a2cd134caae6e299
+Å
+Q.idea/sonarlint/securityhotspotstore/0/9/099f86e6bd0f9f8e8a180e66e0a23958ab7769aa,9\8\98aa3dc1b404efa70d421ff0e6ed1599580967ed
+J
+keycloak/realm-export.json,c\9\c9351aca9fbf607e77607b9b5b2cdbab64325efd
+Å
+Q.idea/sonarlint/securityhotspotstore/1/e/1e132c63bb685b5f526e589b27c75ad70e3059f6,8\d\8d347a3d0435be1d6811792722bb40c283708ed0
